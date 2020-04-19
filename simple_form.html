@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
+		wet-boew.github.io/wet-boew/License-en.html / wet-boew.github.io/wet-boew/Licence-fr.html -->
+    <title>
+        SIMPLE FORM
+    </title>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta name="description" content="Web Experience Toolkit (WET) includes reusable components for building and maintaining innovative Web sites that are accessible, usable, and interoperable. These reusable components are open source software and free for use by departments and external Web communities">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://wet-boew.github.io/wet-boew/theme-wet-boew/assets/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://wet-boew.github.io/wet-boew/theme-wet-boew/css/theme.min.css">
+
+    <noscript><link rel="stylesheet" href="https://wet-boew.github.io/wet-boew/wet-boew/css/noscript.css" /></noscript>
+</head>
+
+<body vocab="http://schema.org/" typeof="WebPage">
+
+
+
+    <main property="mainContentOfPage" class="container">
+
+
+        <h2>HTML Forms</h2>
+        <!-- action="/simple_FORM_push.php.php" -->
+        <form method="get" id="form_container" action="ajax/form2json.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+
+
+
+        <!-- CUSTOM ENDS HERE -->
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://wet-boew.github.io/wet-boew/wet-boew/js/wet-boew.min.js"></script>
+    <script>
+        const serialize_form = form => JSON.stringify(
+            Array.from(new FormData(form).entries())
+            .reduce((m, [key, value]) => Object.assign(m, {
+                [key]: value
+            }), {})
+        );
+        
+        $('#form_container').on('submit', function(event) {
+            event.preventDefault();
+            const json = serialize_form(this);
+            console.log("js:" + json);
+
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: $('#form_container').attr('action'),
+                data: {
+                    formdata: json,
+                },
+                success: function(data) {
+                    console.log(data)
+                }
+            });
+
+
+        });
+
+    </script>
+</body>
+
+</html>

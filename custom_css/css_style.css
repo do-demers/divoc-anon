@@ -1,0 +1,26 @@
+svg{
+    margin: auto;
+}
+
+.tab {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.vis{
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 5px #888888;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+#container{
+    width: 100%;
+    margin-bottom: 2%;
+}
+.pvtUiCell{
+     width: 225px;
+ }
+.pvtAggregator {
+    width: 125px;
+}

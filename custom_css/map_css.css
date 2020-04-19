@@ -1,0 +1,105 @@
+/*path.active {*/
+/*fill: #ccc;*/
+/*cursor: pointer;*/
+/*}*/
+
+
+.active {
+    fill: orange;
+}
+
+.fields {
+    text-align: center;
+}
+
+/* #loader {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    margin: -75px 0 0 -75px;
+    border: 10px solid Gainsboro;
+    border-radius: 50%;
+    border-top: 10px solid DeepSkyBlue;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+} */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+[style*="--aspect-ratio"] > :first-child {
+    width: 100%;
+  }
+  [style*="--aspect-ratio"] > img {  
+    height: auto;
+  } 
+  @supports (--custom:property) {
+    [style*="--aspect-ratio"] {
+      position: relative;
+    }
+    [style*="--aspect-ratio"]::before {
+      content: "";
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }  
+    [style*="--aspect-ratio"] > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }  
+  }
+
+  .note-container {
+    margin: 15px 0px 15px 0px;
+}
+

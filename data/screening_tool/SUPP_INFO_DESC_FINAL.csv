@@ -1,0 +1,36 @@
+SPPLMNTL_INFO_ID,SPPLMNTL_INFO_F_QSTN,CMPLMNTRY_E_QSTN,CMPLMNTRY_F_QSTN,question_cat_en,question_cat_fr,question_short_en,question_short_fr
+870961,What is the longest period you would want to be considered for?Options to Select:1 to 3 weeks3 to 6 weeks3 months3 to 6 months6 to 12 weeks> 6 monthsAll,,,text,texte,Longest period,Période la plus longue
+870963,Are you able to work variable work hours?,Preference for shifts (if necessary):- Morning- Afternoon- Evening- Late Evening- Other:  Specify hours,Preference pour les quarts (si necessaire) :MatinApres-midiSoireeFin de soireeAutre : Preciser les heures,know_other,connaissance_autre,Able to work variable work hours,En mesure de travailler à des heures de travail variables
+870964,"Are you willing and able to travel, if necessary?",,,know_other,connaissance_autre,Able to travel,Apte et disposé à vous déplacer
+870966,Do you have capacity in languages other than English or French?,"Please indicate in which other Language(s) you have capacity in, including Indigenous languages.","Veuillez indiquer les autres langues pour lesquelles vous avez des capacites, y compris les langues autochtones.",lang,lang,Other languages,Autres langues
+870967,Do you have functional and content expertise in Clinical experience?,,,func,comp_fonc,Clinical experience,Clinique
+870968,Do you have functional and content expertise in Communicable Disease Prevention and Control (specifically modes of transmission)?,,,func,comp_fonc,Communicable disease prevention and control,Prévention et contrôle des maladies transmissibles
+870969,Do you have functional and content expertise in Communications?,,,func,comp_fonc,Communications,Communications
+870978,Do you have functional and content expertise in Emergency Management?,,,func,comp_fonc,Emergency management,Gestion des situations d’urgence
+870979,Do you have expertise in Personal Support Work / Resident Care Work/ Nurse?s Aide/ Health Care Aide?,,,func,comp_fonc,Personal support work / Resident care work/ Nurse's aide/ Health care aide,"Travail aux services de soutien à la personne, travail en soins aux résidents, aide-infirmière ou aide-soignant"
+870980,Do you have functional and content expertise as a Physician?,,,func,comp_fonc,Physician,Médecine
+870981,Do you have functional and content expertise in Public Health?,,,func,comp_fonc,Public health,Santé publique
+870983,"Do you have functional and content expertise in a Laboratory (Viral, Bacteria, etc.)?",,,func,comp_fonc,"Laboratory (viral, bacteria, etc.)","Laboratoire (viral, bactéries, etc.)"
+870984,Do you have functional and content expertise in Surveillance?,,,func,comp_fonc,Surveillance,Surveillance
+870989,Do you have functional and content expertise on Quarantine?,,,func,comp_fonc,Quarantine,Quarantaine
+870995,"Do you have knowledge of communicable disease prevention and control, specifically understanding of modes of transmission and public health management of communicable diseases?",,,know_other,connaissance_autre,Knowledge in communicable disease prevention and control,Connaissances dans la prévention et le contrôle des maladies transmissibles
+871011,Do you have knowledge in using information management tools or databases to facilitate detailed reporting?,"Please indicate which level of experience, among those listed below, applies to you:- Basic experience- Moderate experience- Advanced experience",Veuillez indiquer le niveau d'experience qui s'applique a vous parmi les options suivantes :- Experience de base - Experience moderee- Experience avancee,know_other,connaissance_autre,Knowledge in IM tools or databases,Connaissances dans les outils de la GI ou des bases de données
+871067,"Do you have any other skill(s) that you would like to list?  If yes, please indicate them below.",,,text,texte,Other skills,Autres compétences
+871072,Are you studying or do you have a degree in Community Health?,,,degree,grade,Degree in community health,Diplôme en santé communautaire
+871073,Are you studying or do you have a degree in Community Medicine?,,,degree,grade,Degree in community medicine,Diplôme en médecine communautaire
+871074,"Are you studying or do you have a degree in Computer Science, Information Management and Information Technology?",,,degree,grade,"Degree in computer science, IM or IT","Diplôme en sciences informatiques, GI et TI"
+871075,Are you studying or do you have a degree in Emergency Management?,,,degree,grade,Degree in emergency management,Diplôme en gestion des situations d’urgence
+871076,Are you studying or do you have a degree in Epidemiology?,Please provide an answer for each of the following items:- Number of years of experience- Epidemiology expertise- Epidemiology specific software and level,Veuillez fournir une reponse pour chacun des items suivants :- Nombre d'annees d'experience- Expertise en epidemiologie- Logiciels specifiques a l?epidemiologie et niveau,degree,grade,Degree in epidemiology,Diplôme en épidémiologie
+871077,Are you studying or do you have a degree in Infectious Disease?,,,degree,grade,Degree in infectious disease,Diplôme en maladie infectieuse
+871078,"Are you studying or do you have a degree in Laboratory (Viral, Bacteria, etc.)?",,,degree,grade,"Degree in laboratory (viral, bacteria, etc.)","Diplôme en laboratoire (viral, bactéries, etc.)"
+871079,Are you studying or do you have a degree in Mathematics and Statistics?,,,degree,grade,Degree in mathematics and statistics,Diplôme en mathématiques et statistiques
+871080,Are you studying or do you have a degree in Medicine?,,,degree,grade,Degree in medicine,Diplôme en médicine
+871081,Are you studying or do you have a degree in Nursing?,Please provide an answer for each of the following items:- Number of years of experience- Nursing expertise- Certification Nursing Practice Specialties - Province of registration,Veuillez fournir un reponse pour chacun des items suivants :- Nombre d'annees d'experience- Expertise en soins infirmiers- Certification specialisee en soins infirmiers - Province d?enregistrement,degree,grade,Degree in nursing,Diplôme en soins infirmiers
+871083,Are you studying or do you have a degree in Public Health?,,,degree,grade,Degree in public health,Diplôme en santé publique
+871084,Are you studying or do you have a degree in Public Health Inspection?,,,degree,grade,Degree in public health inspection,Diplôme en inspection de la santé publique
+871085,Are you studying or do you have a degree in Surveillance?,,,degree,grade,Degree in surveillance,Diplôme en surveillance
+871087,Are you studying or do you have a degree in Veterinary Medicine?,,,degree,grade,Degree in veterinary medicine,Diplôme en médecine vétérinaire
+871089,"We are recruiting volunteers to assist with COVID-19, these are not federal public service jobs. Please confirm your interest to be considered as volunteer.",,,know_other,connaissance_autre,Agreed to being volunteer,En accord pour faire du bénévole
+871118,Do you speak English?,,,lang,lang,English,Anglais
+871120,Do you speak French?,,,lang,lang,French,Français
+871122,Are you bilingual (English and French)?,,,lang,lang,Bilingual (English and French),Bilingue (anglais et français)
