@@ -20,7 +20,7 @@ function on_change(personal_info,
     new_degree = _.map(document.getElementById("select_d").selectedOptions,'label');
     new_func = _.map(document.getElementById("select_f").selectedOptions,'label');
     new_know = _.map(document.getElementById("select_k").selectedOptions,'label');
-  
+  // debugger;
     
     // var new_vol = $("#volunteer").is(":checked") ? "1" : "0";
     // var new_travel = $("#travel").is(":checked") ? "1" : "0";
@@ -32,7 +32,11 @@ function on_change(personal_info,
   
     var new_appl_city = _.map(_.filter(personal_info, function(o) {return _.isEmpty(new_city) ? _.isEmpty(new_city) : _.includes(new_city, o.REG_E_DESC) }),'APPL_ID');
     var new_appl_edu = _.map(_.filter(personal_info, function(o) {return  _.isEmpty(new_edu) ? _.isEmpty(new_edu) : _.includes(new_edu, o.MAX_ACDMC_LVL_grp); }),'APPL_ID');
-    var new_appl_ols = _.map(_.filter(personal_info, function(o) {return _.isEmpty(new_ols) ? _.isEmpty(new_ols) : _.includes(new_ols, o.OLS_E_DESC); }),'APPL_ID');
+    var new_appl_ols_temp = _.map(_.filter(supp_info_desc, function(o) {return _.includes(new_ols, o.question_short_en); }),'SPPLMNTL_INFO_ID');
+    var new_appl_ols =  _.uniq(_.map(_.filter(questions, function(o){
+                                    return ( (_.isEmpty(new_appl_ols_temp) ? _.isEmpty(new_appl_ols_temp) :   _.includes(new_appl_ols_temp, o.SPPLMNTL_INFO_ID)) 
+                                           && o.APPLCNT_ANS === "1")
+                                }), 'APPL_ID'))
   
     // get id of questions
     var new_degree_id_temp = _.map(_.filter(supp_info_desc, function(o) {return _.includes(new_degree, o.question_short_en); }),'SPPLMNTL_INFO_ID');
@@ -69,12 +73,12 @@ function on_change(personal_info,
             // flex_q
             );
 
-    // debugger;
     var personal_info_upd = _.filter(personal_info, function(o) { return _.includes(inter_APPL, o.APPL_ID); });
  
     d3.select("#total_stats").text(personal_info_upd.length)
-    update_table(personal_info_upd, 
-        personal_info.columns,
+    update_table(
+        personal_info_upd, 
+        // personal_info.columns,
         // data_871067_skills,
         // data_870966_lang,
         // data_871076_epid,

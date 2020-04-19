@@ -1,6 +1,6 @@
 function load_table(
                 tbl_data, 
-                columns,
+                // columns,
                 // data_871067_skills,
                 // data_870966_lang,
                 // data_871076_epid,
@@ -11,12 +11,12 @@ function load_table(
 
 
                  
-    var is_nurse = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Nursing");
-    var is_epid = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Epidemiology");
-    var is_IM = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "IM tools or databases");
-    var is_flex = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "able to work variable work hours");
-    var is_period = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "long period");
-    
+    var is_nurse = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Degree in nursing");
+    var is_epid = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Degree in epidemiology");
+    var is_IM = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "Knowledge in IM tools or databases");
+    var is_flex = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "Able to work variable work hours");
+    var is_period = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "Longest period");
+    // debugger;
     var headers = [
                     // '', //checkbox col.
                     'APPL_ID',
@@ -73,7 +73,7 @@ function load_table(
     // _.map(tbl_data, function(obj) {
     //     return _.assign(obj, _.find(data_871067_skills, {APPL_ID: obj.APPL_ID}));
     // });
- 
+//  debugger;
     d3.select("#total_stats").text(tbl_data.length)
     
     var table = d3.select('#tbl_div')
@@ -119,6 +119,7 @@ function load_table(
         .selectAll('td')
         .data(function (row) {
             return headers.map(function (header) {
+                // debugger;
                 return {
                     column: header,
                     value: row[header]
@@ -207,16 +208,14 @@ function load_table(
         });
 
         $("#submit_button").click(function(){
-   
-
-                
+                   
                var refer_data = _.map(tbl_data, 'APPL_ID'); 
 
                var dataPost = {
                 "APPL_IDs": refer_data
               };
           
-                debugger;
+                // debugger;
               $.ajax({
                   type: 'POST',
                   url: "ajax/table.php",
@@ -242,12 +241,13 @@ function update_table(
             ) {
                 
                 // debugger;
-    var is_nurse = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Nursing");
-    var is_epid = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Epidemiology");
-    var is_IM = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "IM tools or databases");
-    var is_flex = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "able to work variable work hours");
-    var is_period = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "long period");
-    
+ 
+    var is_nurse = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Degree in nursing");
+    var is_epid = _.includes(_.map(document.getElementById("select_d").selectedOptions,'label'), "Degree in epidemiology");
+    var is_IM = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "Knowledge in IM tools or databases");
+    var is_flex = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "Able to work variable work hours");
+    var is_period = _.includes(_.map(document.getElementById("select_k").selectedOptions,'label'), "Longest period");
+
     var headers = [
                 // '', //checkbox col.
                 'APPL_ID',

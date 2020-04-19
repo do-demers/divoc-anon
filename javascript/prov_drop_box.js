@@ -25,7 +25,8 @@ function prov_drop_box(
     .style("width", "100%")
     .on("change", function(i){
         // debugger;
-        on_change(personal_info, 
+        on_change(
+            personal_info, 
             questions, 
             supp_info_desc,
             // data_871067_skills,

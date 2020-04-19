@@ -53,6 +53,7 @@ function screening_tool(error,
         console.log("*** ERROR LOADING FILES: " + error + " ***");
     }
   
+    // debugger;
     var prov_reg_list = _.map(_.groupBy(personal_info, "PROV_E_DESC" ), function(n,i) {
         return {
                 key:i,
@@ -81,9 +82,7 @@ function screening_tool(error,
     // var vol_q = _.map(_.filter(questions, {SPPLMNTL_INFO_ID: "871089", 'APPLCNT_ANS': "1" } ),'APPL_ID');
     // var travel_q = _.map(_.filter(questions, {SPPLMNTL_INFO_ID: "870964", 'APPLCNT_ANS': "1" } ),'APPL_ID');
     // var flex_q = _.map(_.filter(questions, {SPPLMNTL_INFO_ID: "870963", 'APPLCNT_ANS': "1" } ),'APPL_ID');
-
-
-    
+  
     var inter_appl = _.intersectionBy(
                         // init_edu, 
                         // init_ols, 
@@ -148,7 +147,7 @@ function screening_tool(error,
                                 "elements":degree_q_list,
                                 "div":"degree_div",
                                 "suffix": "_d",
-                                "start_val":"Nursing",
+                                "start_val":"Degree in nursing",
                                 "label":"Degree Category:",
                                 "pers_info":personal_info,
                                 "questions":questions,
@@ -195,9 +194,9 @@ function screening_tool(error,
                 d.label, //text for label
                 d.pers_info, //Personal data that will be passed to Table
                 d.questions, //Question descriptions that will be passed to Table
-                d.supp_info_desc, //Text answers (yes/no only) that will be passed to Table
-                d.skills_txt, //Other skills (free-text) that will be passed to Table
-                d.lang_txt, //Other langauges answer (free-text) that will be passed to Table
+                d.supp_info, //Text answers (yes/no only) that will be passed to Table
+                // d.skills_txt, //Other skills (free-text) that will be passed to Table
+                // d.lang_txt, //Other langauges answer (free-text) that will be passed to Table
                 // data_871076_epid,
                 // data_871081_nurse,
                 // data_871011_IM,

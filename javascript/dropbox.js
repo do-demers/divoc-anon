@@ -16,6 +16,8 @@ function drop_box(
         // data_870966_modou
     ) {
 
+
+        // debugger;
     var var_list = drop_data;
     var var_select = d3.select("#"+variable)
         .append("label")
@@ -30,17 +32,18 @@ function drop_box(
         .attr("class", "select_class")
         .style("width", "100%")
         .on("change", function(i){
+            // debugger;
             // console.log(document.getElementById("loader"));
             on_change(
                 personal_info, 
                 questions,
                 supp_info_desc,
-                data_871067_skills,
-                data_870966_lang,
+                // data_871067_skills,
+                // data_870966_lang,
                 // data_871076_epid,
                 // data_871081_nurse,
                 // data_871011_IM,
-                data_870966_modou
+                // data_870966_modou
                 )            
         });
 
